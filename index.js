@@ -9,6 +9,18 @@ drumButton.forEach((container)=>{
    })  
 })
 
+drumButton.forEach((contain)=>{
+    contain.addEventListener('keydown',(e)=>{
+        const currentKey=e.key;
+        console.log(currentKey)
+        audioPlay(currentKey)
+    
+    })
+})
+
+
+
+
 
 function audioPlay(buttonInnerHtml){
     
