@@ -6,17 +6,29 @@ drumButton.forEach((container)=>{
        const buttonInnerHtml =e.target.innerHTML;
        console.log(buttonInnerHtml)
        audioPlay(buttonInnerHtml);
+       AnimateButton(buttonInnerHtml)
    })  
 })
 
 drumButton.forEach((contain)=>{
     contain.addEventListener('keydown',(e)=>{
         const currentKey=e.key;
-        console.log(currentKey)
+        
         audioPlay(currentKey)
-    
+        AnimateButton(currentKey)
     })
 })
+function AnimateButton(currentKey){
+   const classContainer = document.querySelectorAll('.'+currentKey);
+   
+   console.log(classContainer[0])
+   
+   classContainer[0].classList.add('pressed')
+   setTimeout(()=>{
+    classContainer[0].classList.remove('pressed')
+   },1000)
+
+}
 
 
 

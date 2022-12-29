@@ -79,3 +79,9 @@ footer {
   margin: 10px;
   background-color: white;
 }
+
+.pressed{
+   border-color:green;
+  background: white;
+  opacity: 0.6;
+}
